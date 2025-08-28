@@ -1,2 +1,2 @@
-# degoic
-Development Godot on Rails
+# Degoić
+Development Godot on Rails.
