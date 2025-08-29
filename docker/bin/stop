@@ -1,0 +1,10 @@
+#!/bin/sh
+
+__DIR__=$(cd $(dirname $0); pwd)
+APP_PATH=${APP_PATH:-$(cd $__DIR__/..; pwd)}
+
+cd $APP_PATH
+
+
+docker compose stop $@
+

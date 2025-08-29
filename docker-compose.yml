@@ -1,0 +1,14 @@
+services:
+  rails:
+    build:
+      context: .
+      dockerfile: ./docker/rails/Dockerfile
+      args:
+        APP_HOME: /rails
+    container_name: dogoic_rails
+    ports:
+      - 3000:3000
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./rails:/rails
