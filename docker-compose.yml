@@ -12,3 +12,7 @@ services:
     stdin_open: true
     volumes:
       - ./rails:/rails
+      - bundle_cache:/usr/local/bundle/
+
+volumes:
+  bundle_cache:
