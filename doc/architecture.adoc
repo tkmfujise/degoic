@@ -1,0 +1,46 @@
+= Architecture
+
+
+== Diagram
+[plantuml]
+....
+actor User
+
+node "Godot" as Godot {
+	usecase "Play Game" as PlayGame
+	usecase "Auto Test" as AutoTest
+
+	package "Addon" as GodotAddon {
+		[WebSocket] as GodotWebsocket
+	}
+}
+
+node "Docker Container" as docker {
+	rectangle "Rails" as Rails {
+		usecase "See Logs" as SeeLogs
+		usecase "Run Test" as RunTest
+
+		[WebSocket] as RailsWebsocket
+
+		database "SQLite" as DB
+	}
+}
+
+
+left to right direction
+
+User --> PlayGame
+PlayGame ..> GodotWebsocket : log
+GodotWebsocket --> RailsWebsocket
+RailsWebsocket --> DB : Insert Logs
+
+User --> SeeLogs
+SeeLogs <.. DB
+
+User --> RunTest
+RunTest ..> RailsWebsocket
+RailsWebsocket --> GodotWebsocket
+AutoTest <.. GodotWebsocket 
+....
+
+
