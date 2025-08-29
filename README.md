@@ -1,4 +1,4 @@
-# Degoić
+# Degoić 🚂
 Development Godot on Rails.
 
 > [!CAUTION]
