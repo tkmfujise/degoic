@@ -1,0 +1,9 @@
+Description:
+    Create a new service.
+
+Example:
+    `rails generate service IssueSearch`
+
+    This will create:
+        app/services/issue_search_service.rb
+        spec/services/issue_search_service_spec.rb

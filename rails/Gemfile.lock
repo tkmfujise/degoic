@@ -76,6 +76,9 @@ GEM
       uri (>= 0.13.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    annotaterb (4.19.0)
+      activerecord (>= 6.0.0)
+      activesupport (>= 6.0.0)
     ast (2.4.3)
     base64 (0.3.0)
     bcrypt_pbkdf (1.1.1)
@@ -130,6 +133,7 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
+    i18n_factory (0.1.1)
     importmap-rails (2.2.2)
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
@@ -417,6 +421,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_decorator
+  annotaterb
   bootsnap
   brakeman
   bullet
@@ -424,6 +429,7 @@ DEPENDENCIES
   debug
   enum_help
   factory_bot_rails
+  i18n_factory
   importmap-rails
   jbuilder
   kamal
