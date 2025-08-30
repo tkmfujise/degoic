@@ -1,7 +1,5 @@
-<div id="<%= dom_id project %>">
-  <p>
-    <strong>Name:</strong>
-    <%= project.name %>
-  </p>
-
-</div>
+<article id="<%= dom_id project %>">
+  <header><%= link_to project.name, project %></header>
+  Body
+  <footer><%= ldt project.updated_at %></footer>
+</article>

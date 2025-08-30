@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://djbws3o5xoq5i"]
+
+[ext_resource type="Script" uid="uid://bh6cwaktrn568" path="res://addons/degoic/src/channels/practice/practice_channel.gd" id="1_q3unp"]
+
+[node name="PracticeChannel" type="Node"]
+script = ExtResource("1_q3unp")
+channel_name = "PracticeChannel"
+metadata/_custom_type_script = "uid://d3my0wljg4nlw"

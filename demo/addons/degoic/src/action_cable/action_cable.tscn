@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce2fugf584n20"]
+
+[ext_resource type="Script" uid="uid://d3my0wljg4nlw" path="res://addons/degoic/src/action_cable/action_cable.gd" id="1_ntbjm"]
+
+[node name="ActionCable" type="Node"]
+script = ExtResource("1_ntbjm")
+channel_name = "PracticeChannel"

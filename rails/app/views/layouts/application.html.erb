@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Degoic" %></title>
+    <title><%= content_for(:title) || "Development Godot on Rails" %> - Degoić</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -19,10 +19,16 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-    <%= yield %>
+    <%= render 'application/header' %>
+    <main class="container">
+      <%= yield %>
+    </main>
   </body>
 </html>
