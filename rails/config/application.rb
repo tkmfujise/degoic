@@ -20,8 +20,25 @@ module Degoic
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
+    config.i18n.default_locale = :ja
+
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.generators do |g|
+      g.stylesheets     false
+      g.javascripts     false
+      g.helper          false
+      g.assets          false
+
+      g.test_framework :rspec,
+         fixture:          true,
+         view_specs:       false,
+         helper_specs:     true,
+         routing_specs:    false,
+         controller_specs: false,
+         request_specs:    true
+    end
   end
 end

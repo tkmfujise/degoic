@@ -1,0 +1,24 @@
+= ER diagram
+
+== Diagram
+[plantuml]
+....
+class Project {
+  + name
+}
+class Practice {
+  * project_id
+  + scene
+}
+class PracticeLog {
+  * practice_id
+  + event
+  + payload
+}
+
+hide methods
+left to right direction
+
+Project --{ Practice::project_id
+Practice --{ PracticeLog::practice_id
+....
